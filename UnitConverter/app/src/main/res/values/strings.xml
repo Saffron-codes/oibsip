@@ -2,13 +2,16 @@
     <string name="app_name">Unit Converter</string>
     <string name="convert">Convert</string>
     <string name="type_number">Type a number</string>
-    <string-array name="convert_options">
+    <string-array name="convert_options_length">
         <item>mm</item>
         <item>cm</item>
         <item>m</item>
         <item>km</item>
-        <item>gm</item>
-        <item>kg</item>
+    </string-array>
 
+    <string-array name="convert_options_weight">
+        <item>mg</item>
+        <item>grams</item>
+        <item>kg</item>
     </string-array>
 </resources>

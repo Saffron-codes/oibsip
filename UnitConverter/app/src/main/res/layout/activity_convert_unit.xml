@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".ConvertUnit"
     tools:layout_editor_absoluteX="4dp"
     tools:layout_editor_absoluteY="0dp">
 
@@ -13,8 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/convert"
-        app:backgroundTint="@color/material_blue_500"
-        app:cornerRadius="8dp"
+
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -24,7 +24,7 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editTextNumberDecimal"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="140dp"
         android:ems="10"
@@ -37,7 +37,7 @@
 
     <Spinner
         android:id="@+id/from"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="50dp"
@@ -47,7 +47,7 @@
 
     <Spinner
         android:id="@+id/to"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
