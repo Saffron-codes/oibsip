@@ -10,20 +10,21 @@
 
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/converbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/convert"
 
+        android:text="@string/convert"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/ansTV"
         app:layout_constraintVertical_bias="0.171" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editTextNumberDecimal"
+        android:id="@+id/lengthET"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="140dp"
@@ -43,7 +44,7 @@
         android:layout_marginTop="50dp"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+        app:layout_constraintTop_toBottomOf="@+id/lengthET" />
 
     <Spinner
         android:id="@+id/to"
@@ -53,17 +54,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.825"
         app:layout_constraintStart_toEndOf="@+id/from"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+        app:layout_constraintTop_toBottomOf="@+id/lengthET" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/ansTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
         android:text="Answer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+        app:layout_constraintTop_toBottomOf="@+id/lengthET" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

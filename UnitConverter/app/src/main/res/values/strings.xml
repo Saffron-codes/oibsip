@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Unit Converter</string>
     <string name="convert">Convert</string>
-    <string name="type_number">Type a number</string>
+    <string name="type_number">Type a Value</string>
     <string-array name="convert_options_length">
         <item>mm</item>
         <item>cm</item>
@@ -10,8 +10,13 @@
     </string-array>
 
     <string-array name="convert_options_weight">
-        <item>mg</item>
-        <item>grams</item>
         <item>kg</item>
+        <item>g</item>
+        <item>mg</item>
+    </string-array>
+
+    <string-array name="convert_options_temp">
+        <item>C</item>
+        <item>F</item>
     </string-array>
 </resources>
