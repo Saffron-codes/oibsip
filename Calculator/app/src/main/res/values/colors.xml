@@ -9,4 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#E38F11</color>
     <color name="black_grad">#3E3333</color>
+    
+    <color name="dark_grey">#0D4446</color>
+    <color name="eq_color">#28ABA0</color>
+    <color name="grey_variant">#09161B</color>
+    <color name="bg">#010808</color>
 </resources>
