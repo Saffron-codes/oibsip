@@ -21,18 +21,14 @@ public class UnitList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unit_list);
-        String[] unitList = {"Length","Weight","Temperature"};
+        String[] unitList = {"Length","Weight"};
         ListView unitsLV = findViewById(R.id.unitslv);
 
-        unitsLV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(UnitList.this, ConvertUnit.class);
-                String val = unitList[i];
-                intent.putExtra("title",val);
-                //Log.i("lv", String.valueOf(i));
-                startActivity(intent);
-            }
+        unitsLV.setOnItemClickListener((adapterView, view, position, id) -> {
+            Intent intent = new Intent(UnitList.this, ConvertUnit.class);
+            String val = unitList[position];
+            intent.putExtra("title",val);
+            startActivity(intent);
         });
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,unitList);
@@ -49,24 +45,18 @@ public class UnitList extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.info:
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("Developed by");
-                builder.setMessage("Saffron Dionysius");
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // do something
-                        dialog.dismiss();
-                    }
-                });
+        if (item.getItemId() == R.id.info) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Developed by");
+            builder.setMessage("Saffron Dionysius");
+            builder.setPositiveButton("OK", (dialog, which) -> {
+                dialog.dismiss();
+            });
 
-                AlertDialog dialog = builder.create();
-                dialog.show();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+            AlertDialog dialog = builder.create();
+            dialog.show();
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 }

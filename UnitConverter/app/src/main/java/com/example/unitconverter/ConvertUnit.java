@@ -75,12 +75,9 @@ public class ConvertUnit extends AppCompatActivity {
             }
         });
 
-        convertBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                double length = convertValue(title,Double.parseDouble(valueET.getText().toString()));
-                ansTV.setText(String.valueOf(length).concat(toSelectedOption));
-            }
+        convertBtn.setOnClickListener(view -> {
+            double length = convertValue(title,Double.parseDouble(valueET.getText().toString()));
+            ansTV.setText(String.valueOf(length).concat(toSelectedOption));
         });
     }
 
@@ -100,9 +97,6 @@ public class ConvertUnit extends AppCompatActivity {
         else if(Objects.equals(title, "Weight")){
             return R.array.convert_options_weight;
         }
-        else if(title.equals("Temperature")){
-            return R.array.convert_options_temp;
-        }
         else {
             return R.array.convert_options_length;
         }
@@ -114,9 +108,6 @@ public class ConvertUnit extends AppCompatActivity {
         }
         else if(title.equals("Weight")){
             return convertWeight(value,fromSelectedOption,toSelectedOption);
-        }
-        else if(title.equals("Temperature")){
-            return convertTemperature(value,fromSelectedOption,toSelectedOption);
         }
         return 0.0;
     }
@@ -208,29 +199,6 @@ public class ConvertUnit extends AppCompatActivity {
         }
         return 0;
     }
-
-    public static double convertTemperature(double value, String unitFrom, String unitTo) {
-        switch(unitFrom) {
-            case "C":
-                switch(unitTo) {
-                    case "C":
-                        return value;
-                    case "F":
-                        return (value * 9/5) + 32;
-                }
-                break;
-            case "F":
-                switch(unitTo) {
-                    case "C":
-                        return (value - 32) * 5/9;
-                    case "F":
-                        return value;
-                }
-                break;
-        }
-        return 0;
-    }
-
 
 
 }
